@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     var searchBool = false
     let reach = Reachability()
     
+    struct Static {
+        static var dispatchOnceToken: dispatch_once_t = 0
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,10 +29,12 @@ class ViewController: UIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-            self.mySearchBar.hidden = true
+        self.mySearchBar.hidden = true
         
+        dispatch_once(&Static.dispatchOnceToken) {
+            self.alertInFerstOpenApp()
+        }
         
-
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -67,6 +73,27 @@ class ViewController: UIViewController {
     @IBAction func searchButtonAction(sender: AnyObject) {
         
         self.mySearchBar.hidden = false
+        
+    }
+    
+    func alertInFerstOpenApp() {
+        
+        let alertController = UIAlertController(title: "Промо код", message: "Если у вас есть промо код друга, введите его пожалуйста", preferredStyle: .Alert)
+        
+        let alertCancelAction = UIAlertAction(title: "Отмена", style: .Default, handler: nil)
+        let alertOkAction = UIAlertAction(title: "Принять", style: .Default, handler: nil)
+        
+        alertController.addAction(alertCancelAction)
+        alertController.addAction(alertOkAction)
+        
+        alertController.addTextFieldWithConfigurationHandler { (promoKodTextField) in
+            
+            promoKodTextField.placeholder = "Введите промо код"
+            
+        }
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
         
     }
     
