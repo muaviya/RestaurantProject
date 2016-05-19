@@ -11,7 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var mySearchBar: UISearchBar!
     
+    var searchBool = false
     let reach = Reachability()
     
     override func viewDidLoad() {
@@ -22,6 +24,10 @@ class ViewController: UIViewController {
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+            self.mySearchBar.hidden = true
+        
+        
 
     }
 
@@ -58,6 +64,11 @@ class ViewController: UIViewController {
 
     }
     
+    @IBAction func searchButtonAction(sender: AnyObject) {
+        
+        self.mySearchBar.hidden = false
+        
+    }
     
     
 }

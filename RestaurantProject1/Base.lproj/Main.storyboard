@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Reveal View Controller-->
@@ -245,15 +246,32 @@
                     <view key="view" contentMode="scaleToFill" id="6tJ-P6-QrQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IzX-UA-xS2">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Q6W-Wx-rZG" id="4Os-sb-DT6"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Yv8-eq-oQn">
                         <barButtonItem key="leftBarButtonItem" image="menuButton" id="47H-RP-IKV"/>
-                        <barButtonItem key="rightBarButtonItem" image="basket" id="xy8-EM-F3f"/>
+                        <rightBarButtonItems>
+                            <barButtonItem image="basket" id="xy8-EM-F3f"/>
+                            <barButtonItem systemItem="search" id="BW0-c9-s2U">
+                                <connections>
+                                    <action selector="searchButtonAction:" destination="Q6W-Wx-rZG" id="aQA-YQ-LHY"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="menuButton" destination="47H-RP-IKV" id="nWD-aC-4tr"/>
+                        <outlet property="mySearchBar" destination="IzX-UA-xS2" id="Wfd-AE-gL6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lw5-Oo-FTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -285,6 +303,6 @@
         <image name="menuButton" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zz0-W0-tEn"/>
+        <segue reference="9Uq-Q9-3A5"/>
     </inferredMetricsTieBreakers>
 </document>
