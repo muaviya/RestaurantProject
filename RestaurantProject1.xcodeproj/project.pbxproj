@@ -124,6 +124,7 @@
 				1B7DF9911CEDA93C0082AFA1 /* Info.plist */,
 				1B7DF9891CEDA93C0082AFA1 /* RestaurantProject1.xcdatamodeld */,
 				1B7DF9821CEDA93C0082AFA1 /* AppDelegate.swift */,
+				1B4152231CEDC03B008B2027 /* Reachability.swift */,
 				1B7DF99E1CEDAA100082AFA1 /* RestaurantProject1-Bridging-Header.h */,
 			);
 			path = RestaurantProject1;
@@ -196,7 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				1B7DF9841CEDA93C0082AFA1 /* ViewController.swift */,
-				1B4152231CEDC03B008B2027 /* Reachability.swift */,
 				1B4152271CEDEF37008B2027 /* MenuTableViewController.swift */,
 			);
 			name = View;
@@ -234,6 +234,7 @@
 				TargetAttributes = {
 					1B7DF97E1CEDA93C0082AFA1 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = U2AM46G9NK;
 					};
 				};
 			};
@@ -410,10 +411,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RestaurantProject1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.RestaurantProject1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RestaurantProject1/RestaurantProject1-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -424,10 +428,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RestaurantProject1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.RestaurantProject1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RestaurantProject1/RestaurantProject1-Bridging-Header.h";
 			};
 			name = Release;

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var mySearchBar: UISearchBar!
@@ -68,8 +68,16 @@ class ViewController: UIViewController {
     @IBAction func searchButtonAction(sender: AnyObject) {
         
         self.mySearchBar.hidden = false
+        self.mySearchBar.showsCancelButton = true
         
     }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        
+        self.mySearchBar.hidden = true
+        self.mySearchBar.endEditing(true)
+    }
+    
     
     // алерт для отображение промо кода для первого запуска (последующий раз не будет вызвыаться)
     func alertInFerstOpenApp() {
