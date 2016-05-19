@@ -249,6 +249,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Yv8-eq-oQn">
                         <barButtonItem key="leftBarButtonItem" image="menuButton" id="47H-RP-IKV"/>
+                        <barButtonItem key="rightBarButtonItem" image="basket" id="xy8-EM-F3f"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -280,6 +281,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="basket" width="24" height="24"/>
         <image name="menuButton" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
