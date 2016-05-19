@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         }
         
         self.mySearchBar.hidden = true
-        useUserDefoults()
+        self.useUserDefoults()
         
         
     }
@@ -43,13 +43,13 @@ class ViewController: UIViewController {
         
         if !reach.isConnectedToNetwork() {
             
-            alertIsNotConnectNetwork()
+            self.alertIsNotConnectNetwork()
             
         }
         
     }
     
-    // алерт если подключение отсутсвует. 
+    // алерт если подключение отсутсвует.
     func alertIsNotConnectNetwork() {
         
         let alertController = UIAlertController(title: "У вас нет подключения к интернету", message: "Проверьте подключение", preferredStyle: .Alert)
@@ -61,9 +61,8 @@ class ViewController: UIViewController {
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.presentViewController(alertController, animated: true, completion: nil)
         })
-        
-
     }
+
     
     // кнопка для отображение searchBar
     @IBAction func searchButtonAction(sender: AnyObject) {
@@ -93,9 +92,7 @@ class ViewController: UIViewController {
             self.presentViewController(alertController, animated: true, completion: nil)
         })
         
-        
     }
-    
     
     //  функция для отображения алерта один раз за весь жизненный цикл приложение
     func useUserDefoults() {
@@ -111,7 +108,9 @@ class ViewController: UIViewController {
             
         }
     }
-        
+
+    
+            
 }
     
     
