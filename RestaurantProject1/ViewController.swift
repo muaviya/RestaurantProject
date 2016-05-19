@@ -20,10 +20,11 @@ class ViewController: UIViewController {
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        alertInternet()
 
     }
 
-    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -34,6 +35,24 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
 
     }
+    
+    func alertInternet(){
+        
+        let rechability = Reachability()
+        if !rechability.isConnectedToNetwork() {
+            
+            let alertController = UIAlertController(title: "У вас нет подключения к интернету", message: "Проверьте подключение", preferredStyle: .Alert)
+            
+            let alertAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+            
+            alertController.addAction(alertAction)
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+        }
+        
+    }
+    
     
 }
 

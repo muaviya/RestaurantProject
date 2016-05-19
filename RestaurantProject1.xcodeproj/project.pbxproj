@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B4152241CEDC03B008B2027 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4152231CEDC03B008B2027 /* Reachability.swift */; };
 		1B7DF9831CEDA93C0082AFA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7DF9821CEDA93C0082AFA1 /* AppDelegate.swift */; };
 		1B7DF9851CEDA93C0082AFA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7DF9841CEDA93C0082AFA1 /* ViewController.swift */; };
 		1B7DF9881CEDA93C0082AFA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B7DF9861CEDA93C0082AFA1 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B4152231CEDC03B008B2027 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = ../../Reachability.swift; sourceTree = "<group>"; };
 		1B7DF97F1CEDA93C0082AFA1 /* RestaurantProject1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantProject1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7DF9821CEDA93C0082AFA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B7DF9841CEDA93C0082AFA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				1B7DF9841CEDA93C0082AFA1 /* ViewController.swift */,
+				1B4152231CEDC03B008B2027 /* Reachability.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				1B7DF9C81CEDAA310082AFA1 /* SDWebImageDownloader.m in Sources */,
 				1B7DF9D21CEDAA310082AFA1 /* UIView+WebCacheOperation.m in Sources */,
 				1B7DF9CC1CEDAA310082AFA1 /* UIButton+WebCache.m in Sources */,
+				1B4152241CEDC03B008B2027 /* Reachability.swift in Sources */,
 				1B7DF9C31CEDAA310082AFA1 /* MKAnnotationView+WebCache.m in Sources */,
 				1B7DF9C41CEDAA310082AFA1 /* NSData+ImageContentType.m in Sources */,
 				1B7DF9A11CEDAA100082AFA1 /* SWRevealViewController.m in Sources */,
@@ -443,6 +447,7 @@
 				1B7DF9961CEDA93C0082AFA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
