@@ -16,10 +16,6 @@ class ViewController: UIViewController {
     var searchBool = false
     let reach = Reachability()
     
-    struct Static {
-        static var dispatchOnceToken: dispatch_once_t = 0
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,10 +26,8 @@ class ViewController: UIViewController {
         }
         
         self.mySearchBar.hidden = true
+        useUserDefoults()
         
-        dispatch_once(&Static.dispatchOnceToken) {
-            self.alertInFerstOpenApp()
-        }
         
     }
 
@@ -55,6 +49,7 @@ class ViewController: UIViewController {
         
     }
     
+    // алерт если подключение отсутсвует. 
     func alertIsNotConnectNetwork() {
         
         let alertController = UIAlertController(title: "У вас нет подключения к интернету", message: "Проверьте подключение", preferredStyle: .Alert)
@@ -70,12 +65,14 @@ class ViewController: UIViewController {
 
     }
     
+    // кнопка для отображение searchBar
     @IBAction func searchButtonAction(sender: AnyObject) {
         
         self.mySearchBar.hidden = false
         
     }
     
+    // алерт для отображение промо кода для первого запуска (последующий раз не будет вызвыаться)
     func alertInFerstOpenApp() {
         
         let alertController = UIAlertController(title: "Промо код", message: "Если у вас есть промо код друга, введите его пожалуйста", preferredStyle: .Alert)
@@ -92,11 +89,31 @@ class ViewController: UIViewController {
             
         }
         
-        self.presentViewController(alertController, animated: true, completion: nil)
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.presentViewController(alertController, animated: true, completion: nil)
+        })
         
         
     }
     
     
+    //  функция для отображения алерта один раз за весь жизненный цикл приложение
+    func useUserDefoults() {
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let autorizated : Bool = defaults.boolForKey("autorizated")
+        
+        if (!autorizated) {
+            
+            self.alertInFerstOpenApp()
+            defaults.setBool(true, forKey: "autorizated")
+            defaults.synchronize()
+            
+        }
+    }
+        
 }
+    
+    
+
 
