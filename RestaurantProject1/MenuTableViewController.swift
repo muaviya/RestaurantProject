@@ -13,7 +13,7 @@ class MenuTableViewController: UITableViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.tableView.backgroundColor = UIColor(red: 98/255.0, green: 255/255.0, blue: 93/255.0, alpha: 1.0)
+        self.tableView.backgroundColor = UIColor(red: 68/255.0, green: 146/255.0, blue: 75/255.0, alpha: 1.0)
     }
 
     let section = ["", "Для вас", "Меню"]
@@ -28,7 +28,7 @@ class MenuTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         
-        view.tintColor = UIColor(red: 129/255.0, green: 255/255.0, blue: 161/255.0, alpha: 1.0)
+        view.tintColor = UIColor(red: 64/255.0, green: 122/255.0, blue: 55/255.0, alpha: 1.0)
 
         
         let title = UILabel()
