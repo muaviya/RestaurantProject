@@ -11,6 +11,6 @@ import UIKit
 class CollectionCellMainVC: UICollectionViewCell {
 
     @IBOutlet weak var labelString: UILabel!
-    
+    @IBOutlet weak var imageFoodMainVC: UIImageView!
     @IBOutlet weak var priceLabel: UILabel!
 }

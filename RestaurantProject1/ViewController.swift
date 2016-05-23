@@ -10,23 +10,27 @@ import UIKit
 
 class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    var imageArray = [UIImage]()
+    var image1 = UIImage(named: "1")
+    var image2 = UIImage(named: "2")
+    
+    var pageViewController: UIPageViewController!
+    var scrollView: UIScrollView!
+    var pageControl : UIPageControl!
+    var frame : CGRect = CGRectMake(0, 0, 0, 0)
+
+
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var mySearchBar: UISearchBar!
-    @IBOutlet weak var imageSlide: UIScrollView!
-    @IBOutlet weak var pager: UIPageControl!
     @IBOutlet weak var tableCollectionView: UICollectionView!
+    @IBOutlet weak var pageContainer: UIView!
     
-    
-    var searchBool = false
     let reach = Reachability()
     
     var foodModel : [Food] = [Food]()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        foodModel = [Food(name: "Пюре", price: 100), Food(name: "Пицца", price: 180), Food(name: "Лагман", price: 110), Food(name: "Шаурма", price: 80), Food(name: "Узбекский плов", price: 130), Food(name: "Чек Кебаб", price: 240), Food(name: "Макароны по флотски", price: 100)]
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -34,13 +38,81 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
+        self.useUserDefoults()
+        self.settingPC()
+        self.addModeltoArrayFood()
+    
+    }
+    
+    func addModeltoArrayFood() {
         
+        foodModel = [Food(name: "Пюре", price: 100), Food(name: "Пицца", price: 180), Food(name: "Лагман", price: 110), Food(name: "Шаурма", price: 80), Food(name: "Узбекский плов", price: 130), Food(name: "Чек Кебаб", price: 240), Food(name: "Макароны по флотски", price: 100)]
+    }
+    
+    func settingPC() {
         
         self.mySearchBar.hidden = true
-        self.useUserDefoults()
+        
+        imageArray.append(image1!)
+        imageArray.append(image2!)
+        
+        self.scrollView = UIScrollView(frame: CGRectMake(0,0, self.pageContainer.frame.width, self.pageContainer.frame.height))
+        
+        self.pageControl = UIPageControl(frame: CGRectMake(0,250, self.pageContainer.frame.width, 30))
+        
+        scrollView.delegate = self
+        
+        configurePageController()
+        
+        self.pageContainer.addSubview(scrollView)
+        
+        
+
+        
+    }
+    
+    func configurePageController() {
+        
+        self.pageControl.numberOfPages = imageArray.count
+        self.pageControl.currentPage = 0
+        self.pageControl.tintColor =   UIColor.redColor()
+        self.pageControl.pageIndicatorTintColor = UIColor.blackColor()
+        self.pageControl.currentPageIndicatorTintColor = UIColor.greenColor()
+        self.pageContainer.addSubview(pageControl)
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        setPageViewInScoll()
+    }
+    
+    func setPageViewInScoll() {
+        
+        for index in 0..<2 {
+            
+            frame.origin.x = self.scrollView.frame.size.width * CGFloat(index)
+            frame.size = self.scrollView.frame.size
+            self.scrollView.pagingEnabled = true
+            
+            let subView = UIView(frame: frame)
+            let image = UIImageView(frame: subView.frame)
+            image.image = imageArray[index]
+            subView.addSubview(image)
+            self.scrollView.addSubview(subView)
+            
+            self.mySearchBar.hidden = true
+            
+        }
+        
+        self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 3, self.scrollView.frame.size.height)
+        
+        // pageControl.addTarget(self, action: Selector("changePage"), forControlEvents: UIControlEvents.ValueChanged)
         
         
     }
+
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -82,13 +154,15 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
     // кнопка для отображение searchBar
     @IBAction func searchButtonAction(sender: AnyObject) {
         
+        self.scrollView.frame = CGRectMake(0, 40, self.pageContainer.frame.width, self.pageContainer.frame.height)
+        
         self.mySearchBar.hidden = false
         //self.mySearchBar.showsCancelButton = true
         self.mySearchBar.setShowsCancelButton(true, animated: true)
     }
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-        
+        self.scrollView.frame = CGRectMake(0, 0, self.pageContainer.frame.width, self.pageContainer.frame.height)
         self.mySearchBar.hidden = true
         self.mySearchBar.endEditing(true)
     }
