@@ -49,6 +49,7 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
         foodModel = [Food(name: "Пюре", price: 100), Food(name: "Пицца", price: 180), Food(name: "Лагман", price: 110), Food(name: "Шаурма", price: 80), Food(name: "Узбекский плов", price: 130), Food(name: "Чек Кебаб", price: 240), Food(name: "Макароны по флотски", price: 100)]
     }
     
+    // Page Control
     func settingPC() {
         
         self.mySearchBar.hidden = true
@@ -56,6 +57,7 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
         imageArray.append(image1!)
         imageArray.append(image2!)
         
+        self.pageContainer.frame = CGRectMake(0, 0, self.view.frame.width, self.pageContainer.frame.height)
         self.scrollView = UIScrollView(frame: CGRectMake(0,0, self.pageContainer.frame.width, self.pageContainer.frame.height))
         
         self.pageControl = UIPageControl(frame: CGRectMake(0,250, self.pageContainer.frame.width, 30))
@@ -66,11 +68,8 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
         
         self.pageContainer.addSubview(scrollView)
         
-        
-
-        
     }
-    
+    // Page Control
     func configurePageController() {
         
         self.pageControl.numberOfPages = imageArray.count
@@ -81,13 +80,7 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
         self.pageContainer.addSubview(pageControl)
         
     }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        setPageViewInScoll()
-    }
-    
+    // Page Control
     func setPageViewInScoll() {
         
         for index in 0..<2 {
@@ -99,9 +92,9 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
             let subView = UIView(frame: frame)
             let image = UIImageView(frame: subView.frame)
             image.image = imageArray[index]
+            
             subView.addSubview(image)
             self.scrollView.addSubview(subView)
-            
             self.mySearchBar.hidden = true
             
         }
@@ -112,7 +105,12 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
         
         
     }
-
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        setPageViewInScoll()
+    }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -132,6 +130,7 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
         
     }
     
+    // UICollectionViewDataSource
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 6
     }
@@ -161,6 +160,7 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
         self.mySearchBar.setShowsCancelButton(true, animated: true)
     }
     
+    // обработка нажатия на Cancel в search bar
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         self.scrollView.frame = CGRectMake(0, 0, self.pageContainer.frame.width, self.pageContainer.frame.height)
         self.mySearchBar.hidden = true
