@@ -34,6 +34,7 @@
 		1B7DF9D01CEDAA310082AFA1 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7DF9BE1CEDAA310082AFA1 /* UIImageView+HighlightedWebCache.m */; };
 		1B7DF9D11CEDAA310082AFA1 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7DF9C01CEDAA310082AFA1 /* UIImageView+WebCache.m */; };
 		1B7DF9D21CEDAA310082AFA1 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7DF9C21CEDAA310082AFA1 /* UIView+WebCacheOperation.m */; };
+		1BF9EFFB1CF328AB007BC5B5 /* AboutDishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF9EFFA1CF328AB007BC5B5 /* AboutDishVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		1B7DF9C01CEDAA310082AFA1 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		1B7DF9C11CEDAA310082AFA1 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		1B7DF9C21CEDAA310082AFA1 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		1BF9EFFA1CF328AB007BC5B5 /* AboutDishVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutDishVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 			children = (
 				1B7DF9841CEDA93C0082AFA1 /* ViewController.swift */,
 				1B4152271CEDEF37008B2027 /* MenuTableViewController.swift */,
+				1BF9EFFA1CF328AB007BC5B5 /* AboutDishVC.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BF9EFFB1CF328AB007BC5B5 /* AboutDishVC.swift in Sources */,
 				1B7DF9D01CEDAA310082AFA1 /* UIImageView+HighlightedWebCache.m in Sources */,
 				1B7DF9CE1CEDAA310082AFA1 /* UIImage+MultiFormat.m in Sources */,
 				1B4152281CEDEF37008B2027 /* MenuTableViewController.swift in Sources */,

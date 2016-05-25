@@ -9,10 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
-
-    var imageArray = [UIImage]()
-    var image1 = UIImage(named: "1")
-    var image2 = UIImage(named: "2")
+    
+    var imageArray: [UIImage] = [
+        UIImage(named: "1.jpg")!,
+        UIImage(named: "2.jpg")!
+    ]
     
     var pageViewController: UIPageViewController!
     var scrollView: UIScrollView!
@@ -26,7 +27,7 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
     @IBOutlet weak var pageContainer: UIView!
     
     let reach = Reachability()
-    
+    var hideBar = false
     var foodModel : [Food] = [Food]()
 
     override func viewDidLoad() {
@@ -41,6 +42,7 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
         self.useUserDefoults()
         self.settingPC()
         self.addModeltoArrayFood()
+        
     
     }
     
@@ -53,9 +55,6 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
     func settingPC() {
         
         self.mySearchBar.hidden = true
-        
-        imageArray.append(image1!)
-        imageArray.append(image2!)
         
         self.pageContainer.frame = CGRectMake(0, 0, self.view.frame.width, self.pageContainer.frame.height)
         self.scrollView = UIScrollView(frame: CGRectMake(0,0, self.pageContainer.frame.width, self.pageContainer.frame.height))
@@ -83,7 +82,7 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
     // Page Control
     func setPageViewInScoll() {
         
-        for index in 0..<2 {
+        for index in 0...1 {
             
             frame.origin.x = self.scrollView.frame.size.width * CGFloat(index)
             frame.size = self.scrollView.frame.size
@@ -100,9 +99,6 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
         }
         
         self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 3, self.scrollView.frame.size.height)
-        
-        // pageControl.addTarget(self, action: Selector("changePage"), forControlEvents: UIControlEvents.ValueChanged)
-        
         
     }
     
@@ -130,9 +126,15 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
         
     }
     
+    // обработка нажатия
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let vc : AboutDishVC = self.storyboard?.instantiateViewControllerWithIdentifier("AboutDishVC") as! AboutDishVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     // UICollectionViewDataSource
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return foodModel.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -145,8 +147,7 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
         return cell
         
     }
-    
-       // обработка кнопки "Корзина"
+          // обработка кнопки "Корзина"
     @IBAction func basketAction(sender: AnyObject) {
     }
     
@@ -221,7 +222,12 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
     }
     
 }
-    
-    
+
+
+/*
+
+
+ */
+
 
 
