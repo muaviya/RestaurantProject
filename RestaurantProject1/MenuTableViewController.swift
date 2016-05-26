@@ -53,6 +53,14 @@ class MenuTableViewController: UITableViewController {
         
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
+        let vc : ReserveViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ReserveViewController") as! ReserveViewController
+        
+        self.presentViewController(vc, animated: true, completion: nil)
+        
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("tableCell", forIndexPath: indexPath)
         

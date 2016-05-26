@@ -62,6 +62,85 @@
             </objects>
             <point key="canvasLocation" x="-6" y="756"/>
         </scene>
+        <!--Reserve View Controller-->
+        <scene sceneID="jHU-vJ-hXg">
+            <objects>
+                <viewController storyboardIdentifier="ReserveViewController" id="qGL-Bp-CfR" customClass="ReserveViewController" customModule="RestaurantProject1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6s7-G1-j6f"/>
+                        <viewControllerLayoutGuide type="bottom" id="BGP-19-dRm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qC4-B6-CEe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="not_image" translatesAutoresizingMaskIntoConstraints="NO" id="cgJ-aB-s7Q">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="369"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="moF-FE-11b">
+                                <rect key="frame" x="0.0" y="368" width="320" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4y-wF-dZN">
+                                        <rect key="frame" x="49" y="116" width="222" height="42"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="kTk-Ue-X8d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Забронировать">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Оставьте заявку и мы перезвоним вам" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaM-Vj-0wd">
+                                        <rect key="frame" x="8" y="8" width="304" height="100"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="27"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.15529512240000001" green="0.62305689099999995" blue="0.18411355409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="F4y-wF-dZN" secondAttribute="trailing" constant="49" id="QLY-lB-mkb"/>
+                                    <constraint firstAttribute="height" constant="200" id="dc9-OU-7PD"/>
+                                    <constraint firstItem="F4y-wF-dZN" firstAttribute="leading" secondItem="moF-FE-11b" secondAttribute="leading" constant="49" id="hRc-Xx-qfm"/>
+                                    <constraint firstAttribute="bottom" secondItem="F4y-wF-dZN" secondAttribute="bottom" constant="42" id="nbU-pw-j41"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdY-mN-LuQ">
+                                <rect key="frame" x="20" y="20" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="BoK-Ro-Pbq"/>
+                                    <constraint firstAttribute="width" constant="24" id="Fq9-of-YiL"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cgJ-aB-s7Q" secondAttribute="trailing" id="En2-Zd-udo"/>
+                            <constraint firstAttribute="trailing" secondItem="moF-FE-11b" secondAttribute="trailing" id="JiU-Kt-oyY"/>
+                            <constraint firstItem="moF-FE-11b" firstAttribute="leading" secondItem="qC4-B6-CEe" secondAttribute="leading" id="OQu-5g-ZII"/>
+                            <constraint firstItem="PdY-mN-LuQ" firstAttribute="top" secondItem="6s7-G1-j6f" secondAttribute="bottom" id="Rvr-Th-0us"/>
+                            <constraint firstItem="cgJ-aB-s7Q" firstAttribute="top" secondItem="qC4-B6-CEe" secondAttribute="top" id="Vje-vJ-Hkx"/>
+                            <constraint firstItem="PdY-mN-LuQ" firstAttribute="leading" secondItem="qC4-B6-CEe" secondAttribute="leading" constant="20" id="k3j-xh-Otm"/>
+                            <constraint firstItem="cgJ-aB-s7Q" firstAttribute="leading" secondItem="qC4-B6-CEe" secondAttribute="leading" id="nOp-z7-LLx"/>
+                            <constraint firstItem="BGP-19-dRm" firstAttribute="top" secondItem="moF-FE-11b" secondAttribute="bottom" id="o1V-c4-lkw"/>
+                            <constraint firstItem="moF-FE-11b" firstAttribute="top" secondItem="cgJ-aB-s7Q" secondAttribute="bottom" constant="-1" id="x3U-UI-wmf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageFood" destination="cgJ-aB-s7Q" id="0Nc-XJ-rlW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m2R-Yd-GBO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429" y="-561"/>
+        </scene>
         <!--Basket View Controller-->
         <scene sceneID="h37-sZ-FmA">
             <objects>
@@ -720,6 +799,7 @@
     </scenes>
     <resources>
         <image name="basket" width="24" height="24"/>
+        <image name="close" width="24" height="24"/>
         <image name="menuButton" width="24" height="24"/>
         <image name="not_image" width="408" height="408"/>
     </resources>

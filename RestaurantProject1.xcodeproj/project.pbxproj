@@ -38,6 +38,7 @@
 		1BE0F8101CF6D06C00A8325B /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0F80F1CF6D06C00A8325B /* BasketViewController.swift */; };
 		1BE0F8121CF6D8B300A8325B /* BasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0F8111CF6D8B300A8325B /* BasketTableViewCell.swift */; };
 		1BE0F8141CF6E85200A8325B /* DecorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0F8131CF6E85200A8325B /* DecorViewController.swift */; };
+		1BE0F8161CF6FA1200A8325B /* ReserveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0F8151CF6FA1200A8325B /* ReserveViewController.swift */; };
 		1BF9EFFB1CF328AB007BC5B5 /* AboutDishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF9EFFA1CF328AB007BC5B5 /* AboutDishVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,7 @@
 		1BE0F80F1CF6D06C00A8325B /* BasketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
 		1BE0F8111CF6D8B300A8325B /* BasketTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasketTableViewCell.swift; sourceTree = "<group>"; };
 		1BE0F8131CF6E85200A8325B /* DecorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecorViewController.swift; sourceTree = "<group>"; };
+		1BE0F8151CF6FA1200A8325B /* ReserveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveViewController.swift; sourceTree = "<group>"; };
 		1BF9EFFA1CF328AB007BC5B5 /* AboutDishVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutDishVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,6 +221,7 @@
 				1B46B1731CF5ECED0049050B /* LikedVC.swift */,
 				1BE0F80F1CF6D06C00A8325B /* BasketViewController.swift */,
 				1BE0F8131CF6E85200A8325B /* DecorViewController.swift */,
+				1BE0F8151CF6FA1200A8325B /* ReserveViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				1B7DF9D01CEDAA310082AFA1 /* UIImageView+HighlightedWebCache.m in Sources */,
 				1B7DF9CE1CEDAA310082AFA1 /* UIImage+MultiFormat.m in Sources */,
 				1B4152281CEDEF37008B2027 /* MenuTableViewController.swift in Sources */,
+				1BE0F8161CF6FA1200A8325B /* ReserveViewController.swift in Sources */,
 				1B01FBF51CEF43DE000598E6 /* ModelMainVC.swift in Sources */,
 				1B7DF9C91CEDAA310082AFA1 /* SDWebImageDownloaderOperation.m in Sources */,
 				1B7DF98B1CEDA93C0082AFA1 /* RestaurantProject1.xcdatamodeld in Sources */,
