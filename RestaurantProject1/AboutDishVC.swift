@@ -17,18 +17,29 @@ class AboutDishVC: UIViewController, UINavigationBarDelegate {
         
         AddAction.layer.cornerRadius = 20
         
-        let btn1 = UIButton()
-        btn1.setImage(UIImage(named: "back.jpg"), forState: .Normal)
-        btn1.frame = CGRectMake(0, 0, 30, 30)
-        btn1.addTarget(self, action: #selector(AboutDishVC.btn_clicked(_:)), forControlEvents: .TouchUpInside)
-        self.navigationItem.setLeftBarButtonItem(UIBarButtonItem(customView: btn1), animated: true)
-    
+        let btnL = UIButton()
+        btnL.setImage(UIImage(named: "back.jpg"), forState: .Normal)
+        btnL.frame = CGRectMake(0, 0, 30, 30)
+        btnL.addTarget(self, action: #selector(AboutDishVC.btn_clickedLeft(_:)), forControlEvents: .TouchUpInside)
+        self.navigationItem.setLeftBarButtonItem(UIBarButtonItem(customView: btnL), animated: true)
+
+        let btnR = UIButton()
+        btnR.setImage(UIImage(named: "liked.jpg"), forState: .Normal)
+        btnR.frame = CGRectMake(0, 0, 30, 30)
+        btnR.addTarget(self, action: #selector(AboutDishVC.btn_clickedRight(_:)), forControlEvents: .TouchUpInside)
+        self.navigationItem.setRightBarButtonItem(UIBarButtonItem(customView: btnR), animated: true)
+
     }
     
-    func btn_clicked(sender: UIBarButtonItem) {
+    func btn_clickedLeft(sender: UIBarButtonItem) {
         let vc = storyboard?.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
         self.navigationController?.pushViewController(vc, animated: true)
         //self.presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    func btn_clickedRight(sender: UIBarButtonItem) {
+        let vc = storyboard?.instantiateViewControllerWithIdentifier("LikedVC") as! LikedVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     

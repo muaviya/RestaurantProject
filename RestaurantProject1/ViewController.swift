@@ -149,6 +149,10 @@ class ViewController: UIViewController, UISearchBarDelegate, UICollectionViewDel
     }
           // обработка кнопки "Корзина"
     @IBAction func basketAction(sender: AnyObject) {
+        
+        let vc : BasketViewController = self.storyboard?.instantiateViewControllerWithIdentifier("BasketViewController") as! BasketViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+
     }
     
     // кнопка для отображение searchBar

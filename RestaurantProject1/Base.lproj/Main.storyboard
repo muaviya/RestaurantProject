@@ -60,6 +60,24 @@
             </objects>
             <point key="canvasLocation" x="-6" y="756"/>
         </scene>
+        <!--Basket View Controller-->
+        <scene sceneID="h37-sZ-FmA">
+            <objects>
+                <viewController storyboardIdentifier="BasketViewController" id="kty-em-0Z5" customClass="BasketViewController" customModule="RestaurantProject1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c5x-8t-O3I"/>
+                        <viewControllerLayoutGuide type="bottom" id="CIF-u1-nRb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hX3-xv-oxZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k1d-7c-Xyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876" y="-571"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="U2b-eT-6JC">
             <objects>
@@ -234,6 +252,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lw5-Oo-FTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="876" y="67"/>
+        </scene>
+        <!--LikedVC-->
+        <scene sceneID="oCe-FC-wsW">
+            <objects>
+                <viewController storyboardIdentifier="LikedVC" id="63E-WK-O0Q" customClass="LikedVC" customModule="RestaurantProject1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2tE-t6-5Cs"/>
+                        <viewControllerLayoutGuide type="bottom" id="SdR-bC-Vo5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5ND-cR-11I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W9v-BE-EXV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429" y="756"/>
         </scene>
         <!--About DishVC-->
         <scene sceneID="ljH-Ug-tZN">
