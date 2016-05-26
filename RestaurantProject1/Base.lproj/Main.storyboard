@@ -218,6 +218,9 @@
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="ZakazAction:" destination="kty-em-0Z5" eventType="touchUpInside" id="CvP-KJ-Prl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -252,6 +255,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1d-7c-Xyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="876" y="-561"/>
+        </scene>
+        <!--Decor View Controller-->
+        <scene sceneID="C1V-CV-2OW">
+            <objects>
+                <viewController storyboardIdentifier="DecorViewController" id="QEH-cg-tMG" customClass="DecorViewController" customModule="RestaurantProject1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kPs-cl-6y1"/>
+                        <viewControllerLayoutGuide type="bottom" id="ves-aK-4Jz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cfv-9r-qhD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L9k-hw-35w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1251" y="-561"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="U2b-eT-6JC">

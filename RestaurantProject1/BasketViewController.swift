@@ -49,5 +49,12 @@ class BasketViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
 
+    @IBAction func ZakazAction(sender: AnyObject) {
+        
+        let vc = storyboard?.instantiateViewControllerWithIdentifier("DecorViewController") as! DecorViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
   
 }
