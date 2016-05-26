@@ -10,6 +10,10 @@ import UIKit
 
 class BasketTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nameFoodLabel: UILabel!
+    @IBOutlet weak var gramFoodLabel: UILabel!
+    @IBOutlet weak var priceFoodLabel: UILabel!
+    @IBOutlet weak var imageOnCell: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

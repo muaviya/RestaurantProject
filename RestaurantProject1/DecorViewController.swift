@@ -10,6 +10,11 @@ import UIKit
 
 class DecorViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var commentTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,5 +41,7 @@ class DecorViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
+    @IBAction func zakazAction(sender: AnyObject) {
+    }
 
 }
