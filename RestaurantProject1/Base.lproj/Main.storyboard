@@ -688,6 +688,10 @@
                     <navigationItem key="navigationItem" id="mOP-Bx-REx"/>
                     <connections>
                         <outlet property="AddAction" destination="n4c-Wl-oOv" id="4SY-Si-npJ"/>
+                        <outlet property="aboutFoodTextView" destination="du7-YF-2f4" id="RQp-9H-dqJ"/>
+                        <outlet property="gramAboutFoodLabel" destination="RMn-W4-22d" id="p8g-9X-Dir"/>
+                        <outlet property="nameAboutFoodLabel" destination="JlU-cR-fUL" id="8uO-dW-jlR"/>
+                        <outlet property="priceAboutFoodLabel" destination="M9z-Q8-MzR" id="gzV-5G-f0U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70X-nN-13A" userLabel="First Responder" sceneMemberID="firstResponder"/>

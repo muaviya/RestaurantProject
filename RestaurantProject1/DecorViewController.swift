@@ -18,7 +18,6 @@ class DecorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     // создаем программно кнопку устанавливаем ей картину и задаем действие

@@ -12,6 +12,12 @@ class AboutDishVC: UIViewController, UINavigationBarDelegate {
 
     @IBOutlet weak var AddAction: UIButton!
     
+    @IBOutlet weak var gramAboutFoodLabel: UILabel!
+    @IBOutlet weak var nameAboutFoodLabel: UILabel!
+    @IBOutlet weak var priceAboutFoodLabel: UILabel!
+    
+    @IBOutlet weak var aboutFoodTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
