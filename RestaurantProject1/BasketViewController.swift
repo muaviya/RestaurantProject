@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BasketViewController: UIViewController {
+class BasketViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,20 @@ class BasketViewController: UIViewController {
         let vc = storyboard?.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
         self.navigationController?.pushViewController(vc, animated: true)
         //self.presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    // UITableViewDataSource
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("basketCell", forIndexPath: indexPath)
+        
+        return cell
+        
     }
 
   
