@@ -14,7 +14,7 @@ class BasketViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         
     }
-    
+    // создаем программно кнопку устанавливаем ей картину и задаем действие
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -28,11 +28,10 @@ class BasketViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         self.title = "Корзина"
     }
-    
+    // клик левой кнопки переходящей на главную вьюху
     func btn_clickedLeft(sender: UIBarButtonItem) {
         let vc = storyboard?.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
         self.navigationController?.pushViewController(vc, animated: true)
-        //self.presentViewController(vc, animated: true, completion: nil)
     }
     
     // UITableViewDataSource
@@ -49,6 +48,7 @@ class BasketViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
 
+    // переход на экран оформления
     @IBAction func ZakazAction(sender: AnyObject) {
         
         let vc = storyboard?.instantiateViewControllerWithIdentifier("DecorViewController") as! DecorViewController

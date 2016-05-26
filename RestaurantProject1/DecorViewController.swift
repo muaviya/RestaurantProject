@@ -16,20 +16,25 @@ class DecorViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // создаем программно кнопку устанавливаем ей картину и задаем действие
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let btnL = UIButton()
+        btnL.setImage(UIImage(named: "close.jpg"), forState: .Normal)
+        btnL.frame = CGRectMake(0, 0, 30, 30)
+        btnL.addTarget(self, action: #selector(DecorViewController.btn_clickedLeft(_:)), forControlEvents: .TouchUpInside)
+        self.navigationItem.setLeftBarButtonItem(UIBarButtonItem(customView: btnL), animated: true)
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor()]
+        
+        self.title = "Оформление"
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // клик левой кнопки переходящей на главную вьюху
+    func btn_clickedLeft(sender: UIBarButtonItem) {
+        let vc = storyboard?.instantiateViewControllerWithIdentifier("BasketViewController") as! BasketViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
-    */
+
 
 }
